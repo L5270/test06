@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Title</title>
+    <style>
+        html body{
+            background-color:#f5f5f5 ;
+        }
+        a{
+            text-decoration: none;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #di{
+            width: 100%;
+            height: 1295px;
+            /*border: solid red 1px;*/
+        }
+        /*下悬浮框*/
+        #di #bottom{
+            width: 100%;
+            height: 44px;
+            background-color: white;
+            position: fixed;
+            /*处于底部*/
+            bottom: 0;
+            display:inline-block;
+            border-radius:1px;
+            z-index: 10
+        }
+
+        #di #bottom ul{
+            width: 100%;
+            height: 100%;
+            list-style:none;
+            display: flex;
+        }
+
+        #di #bottom ul li{
+            flex: 1;
+            /*border: solid 1px red;*/
+            text-align: center;
+            height: 100%
+        }
+        #di #bottom ul li div{
+            width: 100%;
+            height: 14px;
+            /*border: solid 1px red;*/
+            margin-top: 6px;
+            line-height: 97%;
+            font-size:17px ;
+            color:#c8c8c8 ;
+        }
+        #di #bottom ul li div:hover{
+            color: #4A90E2;
+        }
+        #di #bottom ul li span{
+            /*border: solid 1px red;*/
+            color:#c8c8c8 ;
+            font-size: 10px;
+            margin-bottom: 12px;
+        }
+        /*上*/
+        #di #flot{
+            width: 100%;
+            height: 14%;
+
+            background-image: linear-gradient(-90deg, darkgray 0%, black 100%);
+        }
+        #di #flot div{
+            width: 100%;
+            height:20% ;
+
+            display: flex;
+        }
+        #di #flot div:nth-child(1){
+            padding-top: 3%;
+            align-items: center;
+        }
+        #di #flot div:nth-child(1) h2{
+            margin-left: 4%;
+            color: white;
+        }
+        #di #flot div:nth-child(1) span{
+            margin-left: 56%;
+            color: white;
+            font-size: 15px;
+        }
+        #di #flot div:nth-child(2) span{
+            color: white;
+            font-size: 12px;
+            margin-left: 4%;
+            margin-top: 2.5%;
+        }
+        #di #flot1{
+            width: 100%;
+            height: 82%;
+
+            position: relative;
+            bottom:7%;
+        }
+        #di #flot1 .flot1{
+            width: 100%;
+            height: 33.6%;
+
+        }
+        #di #flot1 .flot1 ul{
+            margin-left: 2.7%;
+            width: 93.2%;
+            height: 100%;
+
+            display: inline-block;
+        }
+        #di #flot1 .flot1 ul li{
+            margin-top: 3.2%;
+            width: 100%;
+            height: 46%;
+
+            border-radius: 20px;
+            background-color: white;
+            display: inline-block;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(1){
+            width: 100%;
+            height: 23.5%;
+            border-bottom:solid 1px #f7f7f8;
+            display: flex;
+            align-items: center;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(1) .shang{
+            width: 5.6%;
+            height: 50%;
+            border-radius: 50px;
+            border: solid 1px #aaa;
+            margin-left: 3%;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(1) img{
+            width: 5%;
+            height: 53%;
+            margin-left: 4%;
+            margin-top: 0.7%;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2){
+            width: 100%;
+            height: 73%;
+            /*border:  solid 1px red;*/
+            display: flex;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .zuo{
+            width: 38.2%;
+            height: 100%;
+            /*border:  solid 1px red;*/
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .zuo .zuo1{
+            width: 40%;
+            height: 100%;
+            /*border:  solid 1px red;*/
+            justify-content: center;
+            align-items: center;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .zuo .zuo1 .shang1{
+            width: 54%;
+            height: 17%;
+            border:  solid 1px #aaa;
+            border-radius: 50px;
+
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .zuo .zuo2{
+            margin-top: -6%;
+            width: 100%;
+            height: 85%;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .zuo img{
+            margin-left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        #di #flot1 .flot1 ul li div:nth-child(2) .you{
+            width: 61%;
+            height: 100%;
+            /*border:  solid 1px red;*/
+            display: inline-block;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .you .you1{
+            width: 90%;
+            height: 28%;
+            /*border:  solid 1px red;*/
+            font-size: 13px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            margin-top: 2%;
+            margin-left: 3%;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .you .you2{
+
+            margin-top: 2%;
+            width: 90%;
+            height: 26%;
+            /*border: solid 1px red;*/
+            margin-left: 5%;
+            align-items: center;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .you .you22{
+            width: 44%;
+            height: 71%;
+            /*border: solid 1px red;*/
+            background-color:#f7f7f8;
+            display: flex;
+            align-items: center;
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .you .you3{
+            margin-top: 2%;
+            margin-left: 2%;
+            width: 90%;
+            height: 25%;
+            display: flex;
+            align-items: center;
+            /*border: solid 1px red;*/
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .you .you3 span{
+            font-size: 13px;
+            color: red;
+            margin-left: 5%;
+            margin-top: 5%;
+
+        }
+        #di #flot1 .flot1 ul li div:nth-child(2) .you .you3 div{
+            width: 40%;
+            height: 45%;
+            margin-left: 40.4%;
+            margin-top: 4%;
+        }
+        input:focus{
+            outline: medium;
+        }
+        #di #flot1 .flot2{
+            width: 100%;
+            height: 7%;
+            /*border: solid 1px red;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        /*推荐*/
+        #di .flot3{
+            width: 96%;
+            height: 210%;
+            /*border: solid 1px red;*/
+            display: flex;
+            /*将空白平居分布*/
+            /*justify-content: space-around;*/
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            left: 1.5%;
+        }
+        #di  div .qqq{
+            display: inline-block;
+        }
+        #di .flot3 div{
+            width:49% ;
+            height: 267px;
+            /*border: solid 1px red;*/
+            float: left;
+        }
+
+        #di  div .qqq ul{
+            list-style:none;
+            width: 100%;
+            height: 100%;
+        }
+        #di  div .qqq ul li:nth-child(1){
+            background-color: rgba(0, 0, 0, 0.03);
+            /*border: solid 1px red;*/
+            width: 179px;
+            height: 168px;
+        }
+        #di  div .qqq ul li:nth-child(1) .images{
+            width: 77%;
+            height: 78%;
+            position: relative;
+            top: 10%;
+            left: 11%;
+        }
+
+        #di  div .qqq ul li:nth-child(1) .images img{
+            width: 100%;
+            height: 100%;
+            background-size: 90%;
+            background-repeat: no-repeat;
+            background-position-x:40%
+        }
+
+        #di  div .qqq ul li:nth-child(2){
+            /*border: solid 1px red;*/
+            width: 100%;
+            height: 30px;
+            position: relative;
+
+        }
+        #di  div .qqq ul li:nth-child(2) span{
+            background-color: #dbce8f;
+            text-align: center;
+            font-size: 10px;
+            color: white;
+            position: absolute;
+            bottom: 79%;
+            left: 14%;
+
+        }
+        #di  div .qqq  ul li:nth-child(2) .font{
+            width: 85%;
+            height: 80%;
+            font-size:14px;
+            text-align: center;
+            text-overflow: ellipsis;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-left: 6%;
+            margin-top: 2%;
+            line-height: 182%;
+        }
+        #di  div .qqq ul li:nth-child(3){
+            /*border: solid 1px red;*/
+            width: 90%;
+            height: 20px;
+            position: relative;
+            left: 4%;
+        }
+        #di  div .qqq ul li:nth-child(3) span{
+            /*border: solid 1px red;*/
+            font-size: 12px;
+            position: relative;
+            bottom: 10%;
+            color: red;
+        }
+        #di  div .qqq ul li:nth-child(4){
+            /*border: solid 1px red;*/
+            width: 100%;
+            height: 34px;
+            position: relative;
+            top: 1%;
+        }
+        #di  div .qqq ul li:nth-child(4) .qian{
+            color: purple;
+            font-size: 18px;
+            font-weight:500;
+            float: left;
+            position: relative;
+            top: 12%;
+            left: 4%;
+        }
+        #di  div .qqq ul li:nth-child(4) div{
+            float: right;
+            position: relative;
+            top: 18%;
+            right: 6%;
+            width: 30%;
+            height: 60%;
+            background-color: red;
+            border-radius:50px;
+        }
+        #di  div .qqq ul li:nth-child(4) div .xiangsi{
+            font-size: 12px;
+            /*float: right;*/
+            width: 2%;
+            height: 2%;
+            background-color: red;
+            color: white;
+            border-radius:50px;
+            position: relative;
+            bottom: 10%;
+            left: 10%;
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="di">
+
+
+    <div id="flot">
+        <div>
+            <h2>购物车</h2>
+            <span>管理</span>
+        </div>
+        <div>
+            <span>共两件宝贝</span>
+        </div>
+    </div>
+
+
+    <div id="flot1">
+        <div class="flot1">
+            <ul>
+                <li>
+                    <div>
+                        <div class="shang"></div>
+                        <img src="https://gw.alicdn.com/tfs/TB1hDVeDMTqK1RjSZPhXXXfOFXa-32-32.png_40x40q90_.webp">
+                        <span style="color: #555555;font-size:13px;margin-left: 4%;:">京联通达数码旗舰店</span>
+                        <span class="iconfont" style="color:#aaa;font-size: 10px;margin-right: 1%;margin-top:0.7%">&#xe62f;</span>
+                    </div>
+
+                    <div>
+                        <div class="zuo">
+                            <div class="zuo1">
+                                <div class="shang1"></div>
+                            </div>
+                            <div class="zuo2">
+                                <img src="https://img.alicdn.com/imgextra/i3/2924891464/O1CN01WPsUcd1MgYRtgHF9S_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                            </div>
+                        </div>
+
+                        <div class="you">
+                            <div class="you1">
+                                顺丰速发【3期免息】Huawei华为手机官方旗舰正品华为5g全网通mate30直降
+                            </div>
+                            <div class="you2">
+                                <div class="you22">
+                                    <span style="font-size:13px; float:right ;color: #aaa">红色</span>
+                                    <img src="https://gw.alicdn.com/tfs/TB1c5y0Eb2pK1RjSZFsXXaNlXXa-10-6.png?getAvatar=avatar_24x24q90_.webp"style="width: 8%;height: 23%;margin-left: 10%" >
+                                </div>
+                            </div>
+
+                            <div class="you3">
+                                <span>￥2399</span>
+                                <div style="border-radius:2px "><button style="border:solid 1px #f7f7f8;width: 20%;height: 96%;font-size: 17px;background-color: white;margin-top: -4%;">-</button> <input style="border:none;width: 56%;height: 90%;position: relative;top: -5%;text-align: center" type="number" value="1"> <button style="border:solid 1px #f7f7f8;width: 20%;height: 96%;font-size: 17px;background-color: white;margin-top: -4%">+</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="shang"></div>
+                        <img src="https://gw.alicdn.com/tfs/TB1hDVeDMTqK1RjSZPhXXXfOFXa-32-32.png_40x40q90_.webp">
+                        <span style="color: #555555;font-size:13px;margin-left: 4%;:">凯瑞玛旗舰店</span>
+                        <span class="iconfont" style="color:#aaa;font-size: 10px;margin-right: 1%;margin-top:0.7%">&#xe62f;</span>
+                    </div>
+
+                    <div>
+                        <div class="zuo">
+                            <div class="zuo1">
+                                <div class="shang1"></div>
+                            </div>
+                            <div class="zuo2">
+                                <img src="https://img.alicdn.com/imgextra/i3/2924891464/O1CN01WPsUcd1MgYRtgHF9S_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp ">
+                            </div>
+                        </div>
+
+                        <div class="you">
+                            <div class="you1">
+                                顺丰速发【3期免息】Huawei华为手机官方旗舰正品华为5g全网通mate30直降
+                            </div>
+                            <div class="you2">
+                                <div class="you22">
+                                    <span style="font-size:13px;color: #aaa">橙色</span>
+                                    <img src="https://gw.alicdn.com/tfs/TB1c5y0Eb2pK1RjSZFsXXaNlXXa-10-6.png?getAvatar=avatar_24x24q90_.webp"style="width: 8%;height: 23%;margin-left: 10%" >
+                                </div>
+                            </div>
+
+                            <div class="you3">
+                                <span>￥2399</span>
+                                <div style="border-radius:2px "><button style="border:solid 1px #f7f7f8;width: 20%;height: 96%;font-size: 17px;background-color: white;margin-top: -4%;">-</button> <input style="border:none;width: 56%;height: 90%;position: relative;top: -5%;text-align: center" type="number" value="1"> <button style="border:solid 1px #f7f7f8;width: 20%;height: 96%;font-size: 17px;background-color: white;margin-top: -4%">+</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="flot2">
+            <img src="https://img.alicdn.com/tfs/TB1V2eQrKSSBuNjy0FlXXbBpVXa-966-114.png" style="width: 43%;height: 26%">
+        </div>
+
+        <div class="flot3">
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i2/2343451459/O1CN01JVyDPX1MeGTJAPupV_!!2343451459-0-lubanu-s.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;星皓食品专营店&nbsp;</span>
+                        <div class="font">康师傅方便面整箱桶装红烧牛肉混合口味泡面</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>5元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥30</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i2/2343451459/O1CN01JVyDPX1MeGTJAPupV_!!2343451459-0-lubanu-s.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;星皓食品专营店&nbsp;</span>
+                        <div class="font">康师傅方便面整箱桶装红烧牛肉混合口味泡面</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>5元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥30</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i2/2343451459/O1CN01JVyDPX1MeGTJAPupV_!!2343451459-0-lubanu-s.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;星皓食品专营店&nbsp;</span>
+                        <div class="font">康师傅方便面整箱桶装红烧牛肉混合口味泡面</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>5元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥30</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i2/2343451459/O1CN01JVyDPX1MeGTJAPupV_!!2343451459-0-lubanu-s.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;星皓食品专营店&nbsp;</span>
+                        <div class="font">康师傅方便面整箱桶装红烧牛肉混合口味泡面</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>5元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥30</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i1/725704393/O1CN01ahrNZS1iK2Wpc14DX_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;速捷运动专场&nbsp;</span>
+                        <div class="font">NIKE AIR JORDAN 1 男经典复刻运动休闲篮球鞋</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>200元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥1200</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i1/725704393/O1CN01ahrNZS1iK2Wpc14DX_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;速捷运动专场&nbsp;</span>
+                        <div class="font">NIKE AIR JORDAN 1 男经典复刻运动休闲篮球鞋</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>200元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥1200</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i1/725704393/O1CN01ahrNZS1iK2Wpc14DX_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;速捷运动专场&nbsp;</span>
+                        <div class="font">NIKE AIR JORDAN 1 男经典复刻运动休闲篮球鞋</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>200元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥1200</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i1/725704393/O1CN01ahrNZS1iK2Wpc14DX_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;速捷运动专场&nbsp;</span>
+                        <div class="font">NIKE AIR JORDAN 1 男经典复刻运动休闲篮球鞋</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>200元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥1200</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i1/725704393/O1CN01ahrNZS1iK2Wpc14DX_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;速捷运动专场&nbsp;</span>
+                        <div class="font">NIKE AIR JORDAN 1 男经典复刻运动休闲篮球鞋</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>200元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥1200</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i1/725704393/O1CN01ahrNZS1iK2Wpc14DX_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;速捷运动专场&nbsp;</span>
+                        <div class="font">NIKE AIR JORDAN 1 男经典复刻运动休闲篮球鞋</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>200元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥1200</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i1/725704393/O1CN01ahrNZS1iK2Wpc14DX_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;速捷运动专场&nbsp;</span>
+                        <div class="font">NIKE AIR JORDAN 1 男经典复刻运动休闲篮球鞋</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>200元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥1200</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i1/725704393/O1CN01ahrNZS1iK2Wpc14DX_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;速捷运动专场&nbsp;</span>
+                        <div class="font">NIKE AIR JORDAN 1 男经典复刻运动休闲篮球鞋</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>200元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥1200</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i1/725704393/O1CN01ahrNZS1iK2Wpc14DX_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;速捷运动专场&nbsp;</span>
+                        <div class="font">NIKE AIR JORDAN 1 男经典复刻运动休闲篮球鞋</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>200元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥1200</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <div class="qqq">
+                <a style="color: black" href="商品详情页面.html"><ul>
+                    <li >
+                        <div class="images">
+                            <img src="https://img.alicdn.com/imgextra/i1/725704393/O1CN01ahrNZS1iK2Wpc14DX_!!0-item_pic.jpg_760x760Q50s50.jpg_.webp">
+                        </div>
+                    </li>
+                    <li>
+                        <span>&nbsp;速捷运动专场&nbsp;</span>
+                        <div class="font">NIKE AIR JORDAN 1 男经典复刻运动休闲篮球鞋</div>
+                    </li>
+                    <li>
+                        <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                        <span>200元券</span>
+                    </li>
+                    <li>
+                        <span class="qian">￥1200</span>
+                        <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                    </li>
+                </ul></a>
+            </div>
+            <!-- 下悬浮框 空-->
+
+        </div>
+        <div style="width: 100%;height: 44px;position: relative"></div>
+    </div>
+
+
+
+
+    <!--下悬浮框-->
+    <div id="bottom">
+        <div class="bottom" style="border-bottom: solid 1px #f5f5f5;background-color: white; width: 100%;height: 115%;margin-bottom: -3%;position: absolute;top: -118%;display: flex">
+            <div style="height: 100%;width: 30%;display: flex;justify-content: center;align-items: center;">
+                <div style="width: 17%;height: 35%;border-radius: 50px;border: solid 1px #aaa;margin-left: -24%"></div>
+                <span style="font-size: 12px;color:#666;margin-left: 6%">全选</span>
+            </div>
+            <div style="width: 39.5%;height: 100%;margin-left: 25%;justify-content: center;align-items: center;display: flex">
+                <div style="width: 36%;height: 37%;display: flex;font-size: 14px">合计<span style="color: red;">￥9999</span></div>
+                <div style="margin-left:4%;width:58%;height:59%;color: white;background-image: linear-gradient(90deg, #FF9000 0%, #FF5000 98%);border-radius: 20px;text-align: center;line-height: 170%">结算(9999)</div>
+            </div>
+        </div>
+        <ul>
+            <li>
+                <a href="天猫.html">
+                    <div class="iconfont">&#xe61f;</div>
+                    <span>首页</span></a>
+            </li>
+
+            <li>
+                <div class="iconfont" style=" color: #4A90E2;">&#xe60c;</div>
+                <span style=" color: #4A90E2;">购物车</span>
+            </li>
+
+            <li>
+                <a href="订单页面.html">
+                    <div class="iconfont">&#xe6e4;</div>
+                    <span> 订单</span></a>
+            </li>
+
+            <li>
+                <div class="iconfont">&#xe60e;</div>
+                <span>我的</span>
+            </li>
+
+            <li>
+                <div class="iconfont">&#xe637;</div>
+                <span>更多</span>
+            </li>
+        </ul>
+    </div>
+
+
+
+</div>
+</body>
+</html>

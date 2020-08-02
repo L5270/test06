@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="css/buy.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #di{
+            width: 100%;
+            height: 7044.63px;
+
+            background-color:#f7f7f8 ;
+        }
+
+        #di #top{
+            width:100%;
+            height:44px;
+            background-color:white;
+            position: fixed;
+            /*处于顶部*/
+            top: 0;
+            border-radius:2px;
+            z-index: 10
+        }
+        #di #top ul {
+            height: 100%;
+            position: relative;
+            list-style:none;
+            display: flex;
+
+
+        }
+        #di #top ul li{
+            height: 100%;
+
+            text-align: center;
+            line-height: 37px;
+            flex: 1;
+
+        }
+        #di #top ul .topleft span{
+            margin-left: -40px;
+            font-size: 20px;
+            color:#c8c8c8 ;
+        }
+        #di #top ul .topbuttom span{
+            margin-right: -32px;
+            font-size: 25px;
+            color:#c8c8c8 ;
+        }
+
+
+        /*下悬浮框*/
+        #di #bottom{
+            width: 100%;
+            height: 54px;
+            background-color: white;
+            position: fixed;
+            /*处于底部*/
+            bottom: 0;
+            display:flex;
+            border-radius:1px;
+            z-index: 10
+        }
+        #di #bottom ul{
+            width: 100%;
+            height: 100%;
+            list-style:none;
+            display: flex;
+        }
+
+        #di #bottom ul li{
+            /*border: solid 1px red;*/
+            text-align: center;
+        }
+        #di #bottom ul li div{
+            width: 100%;
+            height: 24px;
+
+            margin-top: 6px;
+            line-height: 97%;
+            font-size:25px ;
+            color:#c8c8c8 ;
+        }
+        #di #bottom ul li div:hover{
+            color: #4A90E2;
+        }
+        #di #bottom ul li span{
+
+            color:#c8c8c8 ;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        /*图片*/
+        #di #img {
+            width: 100%;
+            height: 375px;
+            /*border: solid 1px red;*/
+            position: relative;
+        }
+        #di #img div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        #di #img div img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        #di #img div:hover{
+            transition: opacity 3s ;
+            opacity: 0;
+        }
+        #di #img div span{
+            position: absolute;
+            background-color: #aaa;
+            top: 346px;
+            left: 330px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: white;
+            opacity: 0.9;
+        }
+
+        /*font 文字*/
+        #di #font{
+            width: 100%;
+            height: 80px;
+            /*border: solid 1px red;*/
+            position: relative;
+        }
+        #di #font .font{
+            background-color: white;
+            width: 100%;
+            height: 49%;
+            /*border:solid 1px red;*/
+            display: flex;
+        }
+        #di #font #font1{
+            width: 94%;
+            height: 100%;
+            /*border: solid 1px red;*/
+            font-size: 14px;
+            color: #051B28;
+            margin-left: 3%;
+        }
+        /*font1 文字*/
+        #di #font2{
+            background-color: white;
+            margin-top: 3%;
+            width: 100%;
+            height: 84px;
+            /*border: solid 1px red;*/
+            position: relative;
+        }
+        #di #font2 div{
+            width: 100%;
+            height: 49%;
+            /*border:solid 1px red;*/
+            display: flex;
+            align-items: center;
+        }
+        /*评价*/
+        #di #evaluation{
+            background-color: white;
+            margin-top: 3%;
+            width: 100%;
+            height: 182px;
+            /*border: solid 1px red;*/
+        }
+        #di #evaluation div{
+            /*border:solid 1px red;*/
+        }
+        #di #evaluation .evaluation{
+            width: 100%;
+            height:43px;
+        }
+
+        #di #evaluation .evaluation ul{
+            width: 100%;
+            height: 100%;
+            list-style:none;
+            display: flex;
+        }
+        #di #evaluation .evaluation li{
+            /*border: solid 1px red;*/
+            text-align: center;
+            margin-left: 3%;
+            margin-top: 2%;
+            border-radius: 50px;
+            font-size:12px;
+            background-color:#FEE;
+            line-height: 205%;
+            color: #666;
+
+        }
+        #di #evaluation #evaluation2{
+            width: 100%;
+            height:33px;
+            display: flex;
+        }
+        #di #evaluation #evaluation2 img{
+            margin-left: 3%;
+            width: 6.5%;
+            height: 76%;
+            border-radius: 50px;
+            margin-top: 0.5%;
+        }
+        #di #evaluation #evaluation2 span{
+            color: #666;
+            font-size: 12px;
+            margin-top: 1.5%;
+            margin-left: 2%;
+        }
+        #di #image{
+            margin-top:3%;
+            width: 100%;
+            height: 86.67%;
+            /*border: solid 1px red;*/
+            position: relative;
+        }
+        #di #image .lazyImg{
+            margin-top: -1.1%;
+            width: 100%;
+        }
+        #di #chanpin{
+            width: 100%;
+            height: 1%;
+            margin-top: 3%;
+            background-color: white;
+            text-align:center;
+            line-height:300%;
+            font-size: 23px;
+        }
+        #di #usiness{
+            margin-top: 3%;
+            background-color: white;
+            width: 100%;
+            height: 150px;
+        }
+        #di #usiness .top{
+            width: 100%;
+            height: 60px;
+            /*border: solid 1px red;*/
+            display: flex;
+        }
+        #di #usiness .top #left{
+            width:14%;
+            height: 88%;
+            border: solid 1px  #aaa;
+            margin-top: 0.7%;
+            margin-left: 1%;
+        }
+        #di #usiness .top #left img{
+            width: 100%;
+            height: 100%;
+        }
+        #di #usiness .top #right{
+
+            width:76%;
+            height: 88%;
+            margin-top: 0.7%;
+            margin-left: 1%;
+        }
+        #di #usiness .top #right ul{
+            width: 100%;
+            height: 100%;
+            list-style:none;
+        }
+        #di #usiness .top #right ul li{
+            width: 100%;
+            height: 46%;
+
+        }
+        #di #usiness .middle{
+            width: 100%;
+            height:45px ;
+            /*border: solid 1px red;*/
+        }
+        #di #usiness .middle ul{
+            width: 100%;
+            height: 100%;
+            list-style:none;
+            display: flex;
+        }
+        #di #usiness .middle ul li{
+            flex: 1;
+            height: 100%;
+            /*border: solid 1px red;*/
+            text-align:center;
+            line-height:240%;
+        }
+        #di #usiness .bottom{
+            width: 100%;
+            height: 28%;
+            /*border: solid 1px red;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #di #usiness .bottom div{
+            width: 25%;
+            height: 54%;
+            border: solid 1px red;
+        }
+        a{
+            text-decoration: none;
+
+        }
+
+        /*点击加入购物车弹出页面*/
+        #di #bottom ul li:nth-child(4):hover .shop{
+            display: block;
+            width: 100%;
+            height: 533px;
+            background-color: white;
+            position: fixed;
+            /*处于底部*/
+            bottom: 0;
+            z-index: 11;
+            /*border: solid 1px red;*/
+            left: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="di">
+    <!--上悬浮框-->
+    <div id="top">
+        <ul>
+            <li class="topleft">
+                <span class="iconfont" >&#xe685;</span>
+            </li>
+            <li>商品</li>
+            <li>评价</li>
+            <li style="border-bottom:solid red 1px">详情</li>
+            <li class="topbuttom"><span class="iconfont">&#xe763;</span></li>
+        </ul>
+    </div>
+    <!-- 上悬浮框 -->
+    <div style="width: 100%;height: 44px;position: relative"></div>
+
+
+    <div id="img">
+        <div><img src="https://img.alicdn.com/imgextra/i1/3837592397/O1CN01BYeoF71TZrxihDItn_!!0-item_pic.jpg_2200x2200Q50s50.jpg_.webp" >
+            <span>&nbsp;&nbsp;2/2&nbsp;&nbsp;</span>
+        </div>
+
+        <div><img src="https://img.alicdn.com/imgextra/i1/3837592397/O1CN01BYeoF71TZrxihDItn_!!0-item_pic.jpg_2200x2200Q50s50.jpg_.webp">
+            <span>&nbsp;&nbsp;1/2&nbsp;&nbsp;</span>
+        </div>
+    </div>
+
+    <div id="font">
+        <div class="font">
+            <p style="color: red;font-size:18px;line-height: 200%;margin-left: 2%;margin-top: 1%">￥</p><span style="color: red;font-size:24px;margin-top: 1%;font-weight: 500;">29.9</span>
+        </div>
+        <div  class="font">
+            <div id="font1">
+                中华成语词典第2版432开大开本高中初中小学生专业中华成语词典万条大词典多全功能工具书
+            </div>
+        </div>
+    </div>
+
+    <div id="font2">
+        <div style=";border-bottom:solid 1px #f7f7f8;">
+            <span style="color: #9B9B9B;font-size:14px;padding-left:3%">选择</span>
+            <div style="color:#051B28;font-size:14px;padding-left:2%;">请选择颜色分类</div>
+            <span class="iconfont" style="margin-left:-20%;color: #9B9B9B;font-size:13px;">&#xe62f;</span>
+        </div>
+
+        <div>
+            <span style="color: #9B9B9B;font-size:14px;padding-left:3%">参数</span>
+            <div style="color:#051B28;font-size:14px;padding-left:2%;">ISB编号 书名</div>
+            <span class="iconfont" style="margin-left:-20%;color: #9B9B9B;font-size:13px;">&#xe62f;</span>
+        </div>
+    </div>
+
+
+    <div id="evaluation">
+        <div style="width: 100%;height: 29px;display: flex;color:#666;padding-left: 2.4%;line-height:180%;font-size: 15px">
+            商品评价(1491)
+            <b><div style="width:70px;color: red;margin-left: 242%;font-size: 13px">查看全部<span class="iconfont" style="font-size:12px;padding-left: 8%">&#xe62f;</span></div></b>
+        </div>
+
+        <div class="evaluation">
+            <ul>
+                <li style="width: 28%;height: 26px">很好用(99)</li>
+                <li style="width: 21%;height: 26px">书也很便宜(56)</li>
+                <li style="width: 21%;height: 26px">物流速度快(789)</li>
+            </ul>
+        </div>
+
+        <div id="evaluation2">
+            <img src="//wwc.alicdn.com/avatar/getAvatar.do?userIdStr=vFkSPFHuXH*evF8LPmHSXm8GXmZhXHcGPGl-Om--vCIyvmZeMGZIP8R-PC9HMkg4">
+            <span>小茗同学</span>
+        </div>
+
+        <div class="evaluation" style="width: 100%;height:37px;display: flex"><span style="font-size: 13px;margin-left: 3%;margin-top: 2%;color:#051b28 ">建议大家购买哦</span></div>
+
+        <div style="width: 100%;height:30px;color:#666;font-size:10px;padding-top: 2%;padding-left: 3% ">
+            2020-05-21
+        </div>
+    </div>
+
+    <div id="usiness">
+        <div class="top">
+            <div id="left">
+                <img src="https://img.alicdn.com/imgextra//76/99/TB1QHUtcgmTBuNjy1XbSuuMrVXa.jpg_120x120Q50s50.jpg_.webp" aria-label="店铺标志">
+            </div>
+            <div id="right">
+                <ul>
+                    <li style="font-size: 16px">南粤九合图书专营店</li>
+                    <li ><img src="//img.alicdn.com/tfs/TB1u5sBnlfH8KJjy1XbXXbLdXXa-198-36.png_120x120Q90s50.jpg_.webp?getAvatar=avatar" aria-label="装饰图" style="width: 28%;height: 58%;margin-top: 2%"></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="middle">
+            <ul>
+                <li>
+                    <span style="color: #666;font-size: 12px">宝贝描述</span>
+                    <span style="color: red;font-size: 12px">4.9</span>
+                </li>
+                <li>
+                    <span style="color: #666;font-size: 12px">卖家服务</span>
+                    <span style="color: red;font-size: 12px">4.8</span>
+                </li>
+                <li>
+                    <span style="color: #666;font-size: 12px">物流服务</span>
+                    <span style="color: red;font-size: 12px">4.8</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bottom">
+            <div style="color: red;font-size: 13px;text-align: center;line-height: 170%;border-radius: 50px;">全部商品</div>
+            <div style="color: red;font-size: 13px;text-align: center;line-height: 170%;border-radius: 50px;margin-left: 5%">进入店铺</div>
+        </div>
+    </div>
+
+    <div id="chanpin">
+        产品基本信息
+    </div>
+
+    <div id="image">
+        <img class="lazyImg" src="https://img.alicdn.com/imgextra/i2/3837592397/O1CN011NvdCw1TZrxAEkYZr_!!3837592397.jpg_2200x2200Q90s50.jpg_.webp" aria-label="商品详情图">
+        <img class="lazyImg" src="https://img.alicdn.com/imgextra/i1/3837592397/O1CN01kd52SM1TZrsMu0oOx_!!3837592397.jpg_2200x2200Q90s50.jpg_.webp" aria-label="商品详情图">
+        <img class="lazyImg" src="https://img.alicdn.com/imgextra/i3/3837592397/O1CN01eJreBB1TZrsTq4jWO_!!3837592397.jpg_2200x2200Q90s50.jpg_.webp" aria-label="商品详情图">
+        <img class="lazyImg" src="https://img.alicdn.com/imgextra/i1/3837592397/O1CN01K7japA1TZrsRMxIxy_!!3837592397.jpg_2200x2200Q90s50.jpg_.webp" aria-label="商品详情图">
+        <img class="lazyImg" src="https://img.alicdn.com/imgextra/i3/3837592397/O1CN01Vna4CP1TZrsS7lrhJ_!!3837592397.jpg_2200x2200Q90s50.jpg_.webp" aria-label="商品详情图">
+        <img class="lazyImg" src="https://img.alicdn.com/imgextra/i1/3837592397/O1CN01DVmTBi1TZrsW7QU49_!!3837592397.jpg_2200x2200Q90s50.jpg_.webp" aria-label="商品详情图">
+        <img class="lazyImg" src="https://img.alicdn.com/imgextra/i2/3837592397/O1CN01B2onOE1TZrsVLZoK6_!!3837592397.jpg_2200x2200Q90s50.jpg_.webp" aria-label="商品详情图">
+        <img class="lazyImg" src="https://img.alicdn.com/imgextra/i4/3837592397/O1CN01wRHPyj1TZrsTXQg5z_!!3837592397.jpg_2200x2200Q90s50.jpg_.webp" aria-label="商品详情图">
+        <img class="lazyImg" src="https://img.alicdn.com/imgextra/i4/3837592397/O1CN013BaaOt1TZrsW7OTN5_!!3837592397.jpg_2200x2200Q90s50.jpg_.webp" aria-label="商品详情图">
+        <img class="lazyImg" src="https://img.alicdn.com/imgextra/i3/3837592397/O1CN01F4UGQl1TZrsUqJZ6z_!!3837592397.jpg_2200x2200Q90s50.jpg_.webp" aria-label="商品详情图">
+
+        <img class="lazyImg" src="//img.alicdn.com/tfs/TB1k9XsQpXXXXXLXpXXXXXXXXXX-750-368.png_760x760Q90s50.jpg_.webp" aria-label="商品详情图">
+    </div>
+
+
+
+    <!--下悬浮框-->
+    <div id="bottom">
+        <ul>
+            <li style="width: 50px;height: 100%">
+                <div class="iconfont">&#xe639;</div>
+                <span>店铺</span>
+            </li>
+
+            <li style="width: 50px;height: 100%">
+                <div class="iconfont">&#xe64d;</div>
+                <span>客服</span>
+            </li>
+
+            <li style="width: 50px;height: 100%">
+                <div class="iconfont">&#xe657;</div>
+                <span>收藏</span>
+            </li>
+
+            <li class="in" style="width:31.2%;height: 100%;background-color:#FF9500;text-align: center;line-height: 380%;color: white;font-size:14px">
+                加入购物车
+                <!--加入购物车-->
+                <!--下悬浮框-->
+                <div class="shop">
+
+                    <div class="rr">
+                        <div class="left">
+                            <img src="https://img.alicdn.com/imgextra/i4/2663774256/O1CN01lHuj2K1hJIGDamAfl_!!2663774256.jpg_760x760Q50s50.jpg_.webp" aria-label="选中的商品图">
+                        </div>
+                        <div class="right">
+                            <ul>
+                                <li style="color: red;font-size: 16px">￥30-36.6</li>
+                                <li style="height: 21%;font-size: 13px;color: black">库存 10641件</li>
+                                <li style="height: 22%;font-size: 13px;color: black">请选择：颜色分类</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ww">
+                        <div><span>颜色分类</span></div>
+
+                        <div>
+                            <ul>
+                                <li>
+                                    <img class="prop-img" src="https://img.alicdn.com/imgextra/i1/1810381882/O1CN01xrWsHy1Pm00DjmIJW_!!1810381882.jpg_760x760Q50s50.jpg_.webp">
+                                    <span>红色</span>
+                                </li>
+                                <li>
+                                    <img class="prop-img" src="https://img.alicdn.com/imgextra/i1/1810381882/O1CN01xrWsHy1Pm00DjmIJW_!!1810381882.jpg_760x760Q50s50.jpg_.webp">
+                                    <span>蓝色</span>
+                                </li>
+                                <li>
+                                    <img class="prop-img" src="https://img.alicdn.com/imgextra/i1/1810381882/O1CN01xrWsHy1Pm00DjmIJW_!!1810381882.jpg_760x760Q50s50.jpg_.webp">
+                                    <span>棕色</span>
+                                </li>
+                                <li>
+                                    <img class="prop-img" src="https://img.alicdn.com/imgextra/i1/1810381882/O1CN01xrWsHy1Pm00DjmIJW_!!1810381882.jpg_760x760Q50s50.jpg_.webp">
+                                    <span>紫色</span>
+                                </li>
+                                <li>
+                                    <img class="prop-img" src="https://img.alicdn.com/imgextra/i1/1810381882/O1CN01xrWsHy1Pm00DjmIJW_!!1810381882.jpg_760x760Q50s50.jpg_.webp">
+                                    <span>粉色</span>
+                                </li>
+                                <li>
+                                    <img class="prop-img" src="https://img.alicdn.com/imgextra/i1/1810381882/O1CN01xrWsHy1Pm00DjmIJW_!!1810381882.jpg_760x760Q50s50.jpg_.webp">
+                                    <span>绿色</span>
+                                </li>
+                                <li>
+                                    <img class="prop-img" src="https://img.alicdn.com/imgextra/i1/1810381882/O1CN01xrWsHy1Pm00DjmIJW_!!1810381882.jpg_760x760Q50s50.jpg_.webp">
+                                    <span>橙色</span>
+                                </li>
+                                <li>
+                                    <img class="prop-img" src="https://img.alicdn.com/imgextra/i1/1810381882/O1CN01xrWsHy1Pm00DjmIJW_!!1810381882.jpg_760x760Q50s50.jpg_.webp">
+                                    <span>蓝色</span>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ee">
+                        <span>购买数量</span>
+                        <div><button style="width: 20%;height: 96%;font-size: 19px">-</button> <input style="width: 20%;height: 90%;position: relative;top: -5%" type="number" value="1"> <button style="width: 20%;height: 96%;font-size: 15px">+</button></div>
+                    </div>
+
+                    <div class="qq">确定</div>
+                </div>
+
+            </li>
+            <li style="width:31.2%;height: 100%;background-color:#FF0036;text-align: center;line-height: 380%;color: white;font-size:14px">立即够买</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

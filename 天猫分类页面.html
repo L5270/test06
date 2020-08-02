@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #di{
+            width: 100%;
+            height:1115px;
+            /*border: solid 1px red;*/
+        }
+        /*顶悬浮栏*/
+        #di #top{
+            width:100%;
+            height: 44px;
+            background-color:#f7f7f8;
+            position: fixed;
+            /*处于顶部*/
+            top: 0;
+            border-radius:2px;
+            z-index: 10
+        }
+        #di #top h4{
+            position: relative;
+            top: 20%;
+            left: 5%;
+            width: 20%;
+            height: 50%;
+            /*border: solid 1px red;*/
+        }
+
+
+        #di #bottom{
+            width: 100%;
+            height: 52px;
+            background-color: #f7f7f8;
+            position: fixed;
+            /*处于底部*/
+            bottom: 0;
+            display:flex;
+            border-radius:1px;
+            z-index: 10
+        }
+        #di #bottom ul{
+            flex: 1;
+            list-style:none;
+            display: flex;
+        }
+
+        #di #bottom ul li{
+            flex: 1;
+            /*border: solid 1px red;*/
+            text-align: center;
+            display: flex;
+        }
+        #di #bottom ul  img{
+            width: 100%;
+            height: 100%
+        }
+
+
+        #di #middle{
+            width: 100%;
+            height: 1019px;
+            /*border: solid red 1px;*/
+            display: flex;
+            position: relative;
+        }
+        #di #middle div{
+            flex: 1;
+
+        }
+
+        #di #middle #left{
+            flex: 0.33;
+            background-color: #f7f7f8;
+        }
+        #di #middle #left ul{
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            flex: 1;
+        }
+        #di #middle #left ul li{
+            width: 94px;
+            height: 58.9px;
+            position: relative;
+            /*border: solid 1px red;*/
+            text-align:center;
+            line-height:59px;
+            background-color: #f7f7f8;
+            border-bottom-style:solid ;
+            border-bottom-width:1px ;
+            border-bottom-color:#c8c8c8 ;
+            color: #9B9B9B;
+
+        }
+        #di #middle #right .ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            flex: 1;
+            /*border: solid 1px red;*/
+
+        }
+
+        #di #middle #right .ul>li{
+            width: 100%;
+            height:379px;
+            position: relative;
+            /*border: solid 1px red;*/
+        }
+
+
+        #di #middle #right ul li div.name h4{
+            width: 20%;
+            height: 44px;
+            line-height: 35px;
+            color:#9B9B9B;
+            font-size: 14px;
+            position: relative;
+            left: 1.5%;
+        }
+
+        #di #middle #right ul li div.images{
+            width: 100%;
+            height: 194px;
+        }
+        #di #middle #right ul li div.images .ul2{
+            height: 100%;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            flex: 1;
+            /*border: solid 1px red;*/
+            top: 1.5px;
+        }
+        #di #middle #right ul li div.images ul li{
+            width: 77.56px;
+            height: 88.42px;
+            padding: 1px;
+            display: inline-block;
+
+            justify-content: space-between;
+            align-content:space-between;
+
+        }
+
+        #di #middle #right ul li div.images ul img{
+            width: 57.42px;
+            height: 57.42px;
+            position: relative;
+            left: 12%;
+        }
+        #di #middle #right ul li div.name2{
+            position: relative;
+            top: 2%;
+            left: -1px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        #di #middle #right ul li div.images1 .ul3{
+            height: 100%;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: relative;
+            flex: 1;
+            /*border: solid 1px red;*/
+            top: 1.5px;
+        }
+        #di #middle #right ul li div.images1{
+            width: 100%;
+            height: 103px;
+        }
+        #di #middle #right ul li div.images1 ul li{
+            width: 77.56px;
+            height: 88.42px;
+            padding: 1px;
+            display: inline-block;
+            /*border: solid 1px red;*/
+            justify-content: space-between;
+            align-content:space-between;
+
+        }
+
+        #di #middle #right ul li div.images1 ul img{
+            width: 57.42px;
+            height: 57.42px;
+            position: relative;
+            left: 12%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="di">
+
+    <div id="top"><h4>全部分类</h4></div>
+    <!--顶悬浮填充-->
+    <div style="width: 100%;height: 44px;position: relative"></div>
+    <div id="middle">
+        <div id="left">
+            <ul>
+                <li style="background-color: white;color: black">为您推荐</li>
+                <li>国际大牌</li>
+                <li>天猫国际</li>
+                <li>女装</li>
+                <li>女鞋</li>
+                <li>男装</li>
+                <li>男鞋</li>
+                <li>内衣</li>
+                <li>母婴</li>
+                <li>手机</li>
+                <li>数码</li>
+                <li>家电</li>
+                <li>美妆</li>
+
+                <li style="border-bottom-style: none">家装</li>
+            </ul>
+        </div>
+
+        <div id="right">
+            <ul class="ul">
+                <li style="height: 241px">
+                    <div class="name"><h4>女装</h4></div>
+                    <div class="images">
+                        <ul class="ul2">
+                            <li>
+                                <img src="https://img.alicdn.com/tfs/TB1eA83sF67gK0jSZPfXXahhFXa-323-430.png_196x196Q90s50.jpg_.webp">
+                                <div class="name2">连衣裙</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tfs/TB1eA83sF67gK0jSZPfXXahhFXa-323-430.png_196x196Q90s50.jpg_.webp">
+                                <div class="name2">衬衫</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tfs/TB1eA83sF67gK0jSZPfXXahhFXa-323-430.png_196x196Q90s50.jpg_.webp">
+                                <div class="name2">外套</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tfs/TB1eA83sF67gK0jSZPfXXahhFXa-323-430.png_196x196Q90s50.jpg_.webp">
+                                <div class="name2">短裙</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tfs/TB1eA83sF67gK0jSZPfXXahhFXa-323-430.png_196x196Q90s50.jpg_.webp">
+                                <div class="name2">打底衫</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tfs/TB1eA83sF67gK0jSZPfXXahhFXa-323-430.png_196x196Q90s50.jpg_.webp">
+                                <div class="name2">连衣裙</div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li style="height: 142px">
+                    <div class="name"><h4>女鞋</h4></div>
+                    <div class="images1">
+                        <ul class="ul3">
+                            <li>
+                                <img src="https://img.alicdn.com/tfs/TB1MCB.SVXXXXaFaXXXXXXXXXXX-100-100.jpg_196x196Q50s50.jpg_.webp">
+                                <div class="name2">小白鞋</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tfs/TB1MCB.SVXXXXaFaXXXXXXXXXXX-100-100.jpg_196x196Q50s50.jpg_.webp">
+                                <div class="name2">高跟鞋</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tfs/TB1MCB.SVXXXXaFaXXXXXXXXXXX-100-100.jpg_196x196Q50s50.jpg_.webp">
+                                <div class="name2">拖鞋</div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li style="height: 241px">
+                    <div class="name"><h4>男装</h4></div>
+                    <div class="images">
+                        <ul class="ul2">
+                            <li>
+                                <img src="//img.alicdn.com/tfs/TB1h.PxqmBYBeNjy0FeXXbnmFXa-100-100.png_170x120Q50s50.jpg_.webp">
+                                <div class="name2">T恤</div>
+                            </li>
+                            <li>
+                                <img src="//img.alicdn.com/tfs/TB1faWZqhGYBuNjy0FnXXX5lpXa-100-100.png_170x120Q50s50.jpg_.webp">
+                                <div class="name2">外套</div>
+                            </li>
+                            <li>
+                                <img src="//img.alicdn.com/tfs/TB1EMREqbSYBuNjSspiXXXNzpXa-100-100.png_170x120Q50s50.jpg_.webp">
+                                <div class="name2">保暖衣</div>
+                            </li>
+                            <li>
+                                <img src="//img.alicdn.com/tfs/TB1vUWzqkCWBuNjy0FaXXXUlXXa-100-100.png_170x120Q50s50.jpg_.webp">
+                                <div class="name2">夹克</div>
+                            </li>
+                            <li>
+                                <img src="//img.alicdn.com/tfs/TB1qW4YqbGYBuNjy0FoXXciBFXa-100-100.png_170x120Q50s50.jpg_.webp">
+                                <div class="name2">休闲裤</div>
+                            </li>
+                            <li>
+                                <img src="//img.alicdn.com/tfs/TB11StUqXGWBuNjy0FbXXb4sXXa-100-100.png_170x120Q50s50.jpg_.webp">
+                                <div class="name2">工装裤</div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li style="height: 241px">
+                    <div class="name"><h4>家电</h4></div>
+                    <div class="images">
+                        <ul class="ul2">
+                            <li>
+                                <img src="//img.alicdn.com/tps/i4/TB1TcZzGVXXXXc_apXXMxXJVFXX-100-100.jpg_170x120Q50s50.jpg_.webp">
+                                <div class="name2">平板电视</div>
+                            </li>
+                            <li>
+                                <img src="//img.alicdn.com/tps/i4/TB1TcZzGVXXXXc_apXXMxXJVFXX-100-100.jpg_170x120Q50s50.jpg_.webp">
+                                <div class="name2">洗衣机</div>
+                            </li>
+                            <li>
+                                <img src="//img.alicdn.com/tps/i3/TB19_gEGVXXXXbAXVXXMxXJVFXX-100-100.jpg_170x120Q50s50.jpg_.webp">
+                                <div class="name2">冰箱</div>
+                            </li>
+                            <li>
+                                <img src="//img.alicdn.com/tps/i2/TB1.koJGVXXXXbiXpXXMxXJVFXX-100-100.jpg_170x120Q50s50.jpg_.webp">
+                                <div class="name2">空调</div>
+                            </li>
+                            <li>
+                                <img src="//img.alicdn.com/tps/i1/TB1FYIEGVXXXXcBXVXXMxXJVFXX-100-100.jpg_170x120Q50s50.jpg_.webp">
+                                <div class="name2">酒柜</div>
+                            </li>
+                            <li>
+                                <img src="//img.alicdn.com/tps/i3/TB1QEMDGVXXXXcGXVXXMxXJVFXX-100-100.jpg_170x120Q50s50.jpg_.webp">
+                                <div class="name2">冷柜</div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li style="height: 142px">
+                    <div class="name"><h4>美妆</h4></div>
+                    <div class="images1">
+                        <ul class="ul3">
+                            <li>
+                                <img src="https://img.alicdn.com/tps/i4/TB1idIEGVXXXXbZXFXXMxXJVFXX-100-100.jpg_196x196Q50s50.jpg_.webp">
+                                <div class="name2">护肤套装</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tps/i4/TB1idIEGVXXXXbZXFXXMxXJVFXX-100-100.jpg_196x196Q50s50.jpg_.webp">
+                                <div class="name2">护肤套装</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tps/i4/TB1idIEGVXXXXbZXFXXMxXJVFXX-100-100.jpg_196x196Q50s50.jpg_.webp">
+                                <div class="name2">护肤套装</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tps/i4/TB1idIEGVXXXXbZXFXXMxXJVFXX-100-100.jpg_196x196Q50s50.jpg_.webp">
+                                <div class="name2">护肤套装</div>
+                            </li>
+                            <li>
+                                <img src="https://img.alicdn.com/tps/i4/TB1idIEGVXXXXbZXFXXMxXJVFXX-100-100.jpg_196x196Q50s50.jpg_.webp">
+                                <div class="name2">护肤套装</div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!--<div style="width: 100%;height: 52px;position: relative"></div>-->
+
+    <div id="bottom">
+        <ul>
+            <li>
+                <a href="天猫.html"><img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/81741/30/12345/4140/5d9c4b13E726f0a1e/82c582e7c375e4b3.png"></a>
+            </li>
+            <li>
+                <img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/56507/6/12787/3168/5d9c4b12Ef363dd8d/4af32f42575509d8.png">
+            </li>
+            <li>
+                <img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/70651/38/12417/3194/5d9d3eafE12cde68b/2467c20113c50451.png">
+            </li>
+            <li>
+                <img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/64954/4/12406/3529/5d9c4b12Ee7a82735/f2fe0a88bf344736.png">
+            </li>
+            <li>
+                <a href="天猫登录页面.html"><img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/68400/36/12368/3153/5d9c4b13E0e0d80a8/876c40f17d91ce44.png"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

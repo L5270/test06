@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#f0f0f0 ">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #di{
+            margin-top: -19px;
+            width:100%;
+            height:100%;
+            background-color: white;
+
+        }
+        #di #denglu{
+            width: 99.5%;
+            height: 120px;
+            border: solid 1px white;
+            border-right:none;
+            border-left:none;
+            /*font-size:17px ;*/
+            /*text-align: center;*/
+            line-height:47px;
+            background-color: white;
+            display: flex;
+            justify-content:center ;
+            align-items:center ;
+
+        }
+        #di div div{
+            position: relative;
+            top: 4%;
+            width:100%;
+            height: 50px;
+            background-color: white;
+        }
+
+
+
+        #di div:nth-child(1) {
+
+            margin-top: 5%;
+            width: 95%;
+            height: 46px;
+            border-bottom-style:solid ;
+            border-bottom-width: 1px;
+            border-bottom-color:#ff5000;
+        }
+        #di div:nth-child(1) #name .name{
+            float: right;
+            /*width: 374px;*/
+            /*height: 46px;*/
+            display: flex;
+            position: relative;
+            border-bottom: solid 1px #c8c8c8 ;
+            right: 1px;
+            top: 1px;
+        }
+        #di #name .name .input{
+            position: absolute;
+        }
+
+        .input{
+            text-align: left;
+            left: 5px;
+        }
+        input:focus{
+            outline: medium;
+        }
+        #di #denglu1{
+            width: 100%;
+            height: 79%;
+            position: relative;
+            margin-top: 10%;
+            left: 4%;
+            text-align: center;
+            background-color: orange;
+            border-radius: 8px;
+            color:white;
+            line-height: 42px;
+
+
+        }
+        #di .di{
+            width: 100%;
+            height: 40px;
+        }
+        #di .di ul{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            list-style:none;
+            margin-top: 2%;
+
+        }
+        #di .di ul li{
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+<div id="di">
+    <div id="denglu">
+        <img src="https://gw.alicdn.com/tfs/TB1p.BGQXXXXXbFXFXXXXXXXXXX-160-160.png"style="height: 70%; width:24%" >
+    </div>
+
+    <!--<div style="width: 100%;height: 80px;padding-top: 15px">-->
+    <div id="name">
+        <div class="name" style="margin-left: 2%;"><input class="input" type="number" style="width: 100%;height: 100%;border: none" placeholder="手机号/邮箱/会员名"required="required"></div>
+        <div class="name" style="margin-left: 2%;border-bottom: solid 1px #FF5000;width: 95%;">
+            <input class="input" type="password" style="width: 100%;height: 100%;border: none" placeholder="请输入登录密码"required="required">
+            <span class="iconfont" style="color: black;z-index:10; position: relative;top: 26%;left: 92%;font-size: 18px;">&#xe634;</span>
+        </div>
+    </div>
+    <!--</div>-->
+    <div style="width: 375px;height: 60px">
+        <div id="denglu1">登录</div>
+    </div>
+
+    <div class="di">
+        <ul>
+            <li style="font-size: 16px;color: red;position: relative;top: 20%;left: 4%"> <a>短信验证码登录</a></li>
+
+            <li style="font-size: 16px;color: red;position: relative;top: 20%;left: -5%;text-align: right"> <a>免费注册</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

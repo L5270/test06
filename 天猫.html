@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*上边框*/
+        #di{
+            width:100%;
+            height: 1975px;
+            /*border: solid 1px red;*/
+            margin: auto;
+        }
+        /*上悬浮框*/
+        #di #top{
+            width:100%;
+            height: 90px;
+            background-color: red;
+            position: fixed;
+            /*处于顶部*/
+            top: 0;
+            border-radius:2px;
+            z-index: 10
+        }
+        #di #top #top1{
+            width: 100%;
+            height: 44px;
+            display: flex;
+        }
+
+        #di #top #top1 .left{
+            /*border: solid 1px red;*/
+            list-style: none;
+            display: flex;
+            /*换行*/
+            flex:1;
+            /*纵向居中*/
+            justify-content: space-between;
+            /*横向居中*/
+            align-content: space-between;
+        }
+        #di .left li{
+            width: 33%;
+            /*border: solid 1px black;*/
+            display: flex;
+        }
+        #di .left li:nth-child(1) div{
+            color: white;
+            font-size:140% ;
+            position: relative;
+            left: 7%;
+            top: 18%;
+        }
+        #di .left li:nth-child(2) div img{
+            position: relative;
+            top: 22%;
+        }
+        #di .left li:nth-child(3) span{
+            width: 100%;
+            color: white;
+            padding-left: 67%;
+            padding-top: 8%;
+        }
+
+        #di #top #top2{
+            width: 100%;
+            height: 46px;
+        }
+        #di #top #top2 div{
+            width: 95%;
+            position: relative;
+            left: 2%;
+            display: flex;
+            background-color: white;
+            border-radius: 4px;
+        }
+        #di #top #top2 div img{
+            width: 15px;
+            height: 16px;
+            margin: 10px 10px;
+        }
+        #di #top #top2 div span{
+            font-size: 14px;
+            line-height: 38px;
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        /*第二个div*/
+        #di div:nth-child(3){
+            /*border: solid 1px red;*/
+            width: 100%;
+            height: 78px;
+        }
+        #di #above .left1{
+            display: flex;
+            /*border: solid 1px;*/
+            position: relative
+
+        }
+
+        #di #above .left1 li{
+            list-style: none;
+            flex: 1;
+            height: 80px;
+            /*border: solid 1px;*/
+        }
+        #di #above .left1 li div:nth-child(1){
+            width: 100%;
+            height: 48px;
+            /*border: solid 1px;*/
+            display: flex;
+        }
+        #di #above .left1 li div:nth-child(2){
+            width: 100%;
+            height: 29px;
+            /*border: solid 1px;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #di #above .left1 li img{
+            width: 48px;
+            height: 48px;
+            position: relative;
+            left: 19%;
+            top: 10%;
+        }
+        #di #above .left1 li span{
+            margin-top: 11%;
+            font-size: 13px;
+        }
+
+        /*第三个div*/
+        #di #images{
+            width: 93.2%;
+            height: 132px;
+
+            /*居中*/
+            margin: auto;
+            position: relative;
+
+        }
+        #images .img{
+            /*流式布局 从上到下排列
+
+            */
+            width: 100%;
+            height: 100%;
+            background-image: url("https://gw.alicdn.com/tfs/TB11pZwOKL2gK0jSZFmXXc7iXXa-1035-390.jpg_790x10000Q75.jpg");
+            background-size: 100% 100%;
+
+
+        }
+        #di #images img {
+            width: 5%;
+            height: 2%;
+            position: relative;
+            left: 24%;
+            top: 79%;
+        }
+
+        /*第四个div*/
+        #di div:nth-child(5){
+            width: 100%;
+            height: 40px;
+            position: relative;
+        }
+        #di div:nth-child(5) span{
+            font-size: 18px;
+            font-weight: bold;
+            color:black;
+            position: relative;
+            left: 4%;
+            top: 28%;
+            opacity: 0.8;
+        }
+        /*第五个div*/
+        #di div:nth-child(6){
+            height: 166%;
+            /*border: solid 1px red;*/
+            display: flex;
+            /*将空白平居分布*/
+            /*justify-content: space-around;*/
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            left: 0.62%;
+        }
+        #di div:nth-child(6) div{
+
+            width:48% ;
+            height: 267px;
+            /*border: solid 1px red;*/
+            float: left;
+
+        }
+        #di  div .qqq{
+            display: inline-block;
+        }
+        #di  div .qqq ul{
+            list-style:none;
+            width: 100%;
+            height: 100%;
+        }
+        #di  div .qqq ul li:nth-child(1){
+            background-color: rgba(0, 0, 0, 0.03);
+            /*border: solid 1px red;*/
+            width: 179px;
+            height: 168px;
+        }
+        #di  div .qqq ul li:nth-child(1) .images{
+            width: 77%;
+            height: 78%;
+            position: relative;
+            top: 10%;
+            left: 11%;
+        }
+
+        #di  div .qqq ul li:nth-child(1) .images img{
+            width: 100%;
+            height: 100%;
+            background-size: 90%;
+            background-repeat: no-repeat;
+            background-position-x:40%
+        }
+
+        #di  div .qqq ul li:nth-child(2){
+            /*border: solid 1px red;*/
+            width: 100%;
+            height: 30px;
+            position: relative;
+
+        }
+        #di  div .qqq ul li:nth-child(2) span{
+            background-color: #dbce8f;
+            text-align: center;
+            font-size: 10px;
+            color: white;
+            position: absolute;
+            bottom: 79%;
+            left: 14%;
+
+        }
+        #di  div .qqq ul li:nth-child(2) .font{
+            width: 85%;
+            height: 80%;
+            font-size:14px;
+            text-align: center;
+            text-overflow: ellipsis;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-left: 6%;
+            margin-top: 2%;
+            line-height: 182%;
+        }
+        #di  div .qqq ul li:nth-child(3){
+            /*border: solid 1px red;*/
+            width: 90%;
+            height: 20px;
+            position: relative;
+            left: 4%;
+        }
+        #di  div .qqq ul li:nth-child(3) span{
+            /*border: solid 1px red;*/
+            font-size: 12px;
+            position: relative;
+            bottom: 10%;
+            color: red;
+        }
+        #di  div .qqq ul li:nth-child(4){
+            /*border: solid 1px red;*/
+            width: 100%;
+            height: 34px;
+            position: relative;
+            top: 1%;
+        }
+        #di  div .qqq ul li:nth-child(4) .qian{
+            color: red;
+            font-size: 18px;
+            font-weight:800;
+            float: left;
+            position: relative;
+            top: 12%;
+            left: 4%;
+        }
+        #di  div .qqq ul li:nth-child(4) div{
+            float: right;
+            position: relative;
+            top: 18%;
+            right: 3%;
+            width: 30%;
+            height: 60%;
+            background-color: red;
+            border-radius:50px;
+        }
+        #di  div .qqq ul li:nth-child(4) div .xiangsi{
+            font-size: 12px;
+            /*float: right;*/
+            width: 2%;
+            height: 2%;
+            background-color: red;
+            color: white;
+            border-radius:50px;
+            position: relative;
+            bottom: 10%;
+            left:10%;
+
+
+        }
+
+
+        /*下悬浮框*/
+        #di #bottom{
+            width: 100%;
+            height: 52px;
+            background-color: white;
+            position: fixed;
+            /*处于底部*/
+            bottom: 0;
+            display:flex;
+            border-radius:1px;
+            z-index: 10
+        }
+        #di #bottom ul{
+            flex: 1;
+            list-style:none;
+            display: flex;
+        }
+
+        #di #bottom ul li{
+            flex: 1;
+            /*border: solid 1px red;*/
+            text-align: center;
+            display: flex;
+        }
+        #di #bottom ul  img{
+            width: 100%;
+            height: 100%
+        }
+
+        input:focus{
+            outline: medium;
+        }
+        a{
+            text-decoration: none;
+            /*更改a标签颜色*/
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+<div id="di">
+    <!--上悬浮框-->
+    <div id="top">
+        <div id="top1">
+            <ul class="left">
+                <li>
+                    <div class="iconfont"><a href="天猫分类页面.html">&#xe747;</a></div>
+                </li>
+                <li>
+                    <div><img  src="//gw.alicdn.com/tfs/TB1wQw8qamWBuNjy1XaXXXCbXXa-237-41.png_240x10000.jpg_.webp" style="width: 118.5px; height: 20.5px; "></div>
+                </li>
+                <li>
+                    <span><a href="登录页面.html">登录</a></span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="top2">
+            <div><img  src="//gw.alicdn.com/tfs/TB1rIFEqCBYBeNjy0FeXXbnmFXa-60-64.png_110x10000.jpg_.webp"><input  style="width: 89%;border: none" placeholder="搜索商品、品牌" ><span ></span></div>
+        </div>
+    </div>
+    <!-- 上悬浮框 空-->
+    <div style="width: 100%;height: 90px;position: relative"></div>
+    <!--苏宁 天猫超市 天猫国际 聚划算 分类-->
+    <div id="above">
+        <ul class="left1">
+            <li>
+                <div>
+                    <img src="//gw.alicdn.com/tfs/TB1ISdWSFXXXXbFXXXXXXXXXXXX-146-147.png_110x10000.jpg_.webp">
+                </div>
+                <div>
+                    <span>苏宁易购</span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img  src="//gw.alicdn.com/tfs/TB1wSoFa5qAXuNjy1XdXXaYcVXa-196-196.png?avatar=1_110x10000.jpg_.webp">
+                </div>
+                <div>
+                    <span>天猫超市</span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img  src="//gw.alicdn.com/tfs/TB1Jc0fSFXXXXXTapXXXXXXXXXX-146-147.png_110x10000.jpg_.webp">
+                </div>
+                <div>
+                    <span>天猫国际</span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img  src="//gw.alicdn.com/tfs/TB15lhOSFXXXXaKXpXXXXXXXXXX-147-147.png_110x10000.jpg_.webp">
+                </div>
+                <div>
+                    <span>聚划算</span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="//gw.alicdn.com/tfs/TB12CFXSFXXXXcpapXXXXXXXXXX-146-147.png_110x10000.jpg_.webp">
+                </div>
+                <div>
+                    <span>分类</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="images">
+        <div class="img">
+            <img src="//gw.alicdn.com/tps/TB1XRNFNXXXXXXKXXXXXXXXXXXX-32-4.png_110x10000.jpg_.webp">
+            <img src="//gw.alicdn.com/tps/TB1XRNFNXXXXXXKXXXXXXXXXXXX-32-4.png_110x10000.jpg_.webp">
+            <img src="//gw.alicdn.com/tps/TB1XRNFNXXXXXXKXXXXXXXXXXXX-32-4.png_110x10000.jpg_.webp">
+            <img src="//gw.alicdn.com/tps/TB1XRNFNXXXXXXKXXXXXXXXXXXX-32-4.png_110x10000.jpg_.webp">
+            <img src="//gw.alicdn.com/tps/TB1XRNFNXXXXXXKXXXXXXXXXXXX-32-4.png_110x10000.jpg_.webp">
+            <img src="//gw.alicdn.com/tps/TB1XRNFNXXXXXXKXXXXXXXXXXXX-32-4.png_110x10000.jpg_.webp" style="background-color: white">
+            <img src="//gw.alicdn.com/tps/TB1XRNFNXXXXXXKXXXXXXXXXXXX-32-4.png_110x10000.jpg_.webp">
+            <img src="//gw.alicdn.com/tps/TB1XRNFNXXXXXXKXXXXXXXXXXXX-32-4.png_110x10000.jpg_.webp">
+            <img src="//gw.alicdn.com/tps/TB1XRNFNXXXXXXKXXXXXXXXXXXX-32-4.png_110x10000.jpg_.webp" >
+        </div>
+    </div>
+
+    <div><span>猜你喜欢</span></div>
+
+    <div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <a href="商品详情页面.html"><img src="https://img.alicdn.com/imgextra/i1/3837592397/O1CN01BYeoF71TZrxihDItn_!!0-item_pic.jpg_2200x2200Q50s50.jpg_.webp"></a>
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;新华旗舰店&nbsp;</span>
+                    <div class="font"> 中华成语词典第2版432开大开本高中初中小学生专业中华成语词典万条大词典多全功能工具书</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>5元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥30</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="qqq">
+            <ul>
+                <li >
+                    <div class="images">
+                        <img src="https://img.alicdn.com/imgextra/i1/4094504222/O1CN01OYTfT51h3ifY682sg_!!4094504222.jpg_2200x2200Q100s50.jpg_.webp">
+                    </div>
+                </li>
+                <li>
+                    <span>&nbsp;巴苏姆&nbsp;</span>
+                    <div class="font">创意迷你小型USB可爱小型插排</div>
+                </li>
+                <li>
+                    <img src="//gw.alicdn.com/tfs/TB1a4C4cq1s3KVjSZFAXXX_ZXXa-230-44.png_150x10000.jpg_.webp"style="width: 73px;height: 14px">
+                    <span>1元券</span>
+                </li>
+                <li>
+                    <span class="qian">￥9.9</span>
+                    <div><span class="xiangsi">&nbsp;看相似&nbsp;</span></div>
+                </li>
+            </ul>
+        </div>
+    <!--下悬浮框空-->
+    <div style="width: 100%;height: 43px;position: relative"></div>
+    <!--下悬浮框-->
+    <div id="bottom">
+        <ul>
+            <li>
+                <img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/81741/30/12345/4140/5d9c4b13E726f0a1e/82c582e7c375e4b3.png">
+            </li>
+            <li>
+                <a href="天猫分类页面.html"> <img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/56507/6/12787/3168/5d9c4b12Ef363dd8d/4af32f42575509d8.png"></a>
+            </li>
+            <li>
+                <img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/70651/38/12417/3194/5d9d3eafE12cde68b/2467c20113c50451.png">
+            </li>
+            <li>
+                <a href="购物车页面.html"> <img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/64954/4/12406/3529/5d9c4b12Ee7a82735/f2fe0a88bf344736.png"></a>
+            </li>
+            <li>
+                <a href="登录页面.html"><img src="https://img11.360buyimg.com/jdphoto/s130x100_jfs/t1/68400/36/12368/3153/5d9c4b13E0e0d80a8/876c40f17d91ce44.png"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
