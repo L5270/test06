@@ -1,0 +1,142 @@
+/*加入购物车 下悬浮框*/
+#di #bottom ul li:nth-child(4):hover .shop .qq{
+    position: fixed;
+    width: 100%;
+    height: 48px;
+    /*border: solid red 1px;*/
+    bottom: 0;
+    background-color: red;
+    font-size: 15px;
+    color: white;
+    text-align:center;
+    line-height:270%;
+}
+
+/*顶部第一个div*/
+#di #bottom ul li:nth-child(4):hover .rr{
+    margin-top: 0;
+    width: 100%;
+    height: 88px;
+    /*border:  solid red 1px;*/
+    position: relative;
+    display: flex;
+}
+#di #bottom ul li:nth-child(4):hover .rr div{
+    margin-top: 0;
+    /*border: solid 1px red;*/
+    height:100% ;
+}
+#di #bottom ul li:nth-child(4):hover .rr .left{
+    width: 40%;
+    margin-left:1% ;
+}
+#di #bottom ul li:nth-child(4):hover .rr .left img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -27%;
+
+}
+#di #bottom ul li:nth-child(4):hover .rr .right ul{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    /*border: solid 1px red;*/
+}
+#di #bottom ul li:nth-child(4):hover .rr .right ul li{
+    width: 100%;
+    height: 31%;
+    /*border: solid 1px red;*/
+    text-align:center;
+    line-height:104%;
+    /*border: solid 1px red;*/
+    position: relative;
+    display: flex;
+    top: 10%;
+    left: 3%;
+
+}
+/*第二个div*/
+#di #bottom ul li:nth-child(4):hover .ww{
+    width: 100%;
+    height: 59%;
+    /*border: solid 1px red;*/
+}
+
+#di #bottom ul li:nth-child(4):hover .ww div:nth-child(1){
+    width: 100%;
+    height: 45px;
+    /*border: solid 1px red;*/
+    margin-top: 0;
+}
+
+#di #bottom ul li:nth-child(4):hover .ww div:nth-child(1) span{
+    color: black;
+    font-size: 13px;
+    margin-right:72%;
+    position: relative;
+    top: 25%;
+}
+
+#di #bottom ul li:nth-child(4):hover .ww div:nth-child(2){
+    margin-top: 0;
+    height: 85%;
+    width: 70%;
+    /*border: solid 1px red;*/
+    margin-left: 6%;
+}
+#di #bottom ul li:nth-child(4):hover .ww div:nth-child(2) ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    flex: 1;
+}
+#di #bottom ul li:nth-child(4):hover .ww div:nth-child(2) ul li{
+    display: flex;
+    width: 120px;
+    height: 30px;
+    position: relative;
+    /*border: solid 1px red;*/
+    text-align:center;
+    line-height:59px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #f5f5f5;
+}
+
+#di #bottom ul li:nth-child(4):hover .ww div:nth-child(2) ul li img{
+    width: 21%;
+    height: 67%;
+}
+#di #bottom ul li:nth-child(4):hover .ww div:nth-child(2) ul li span{
+    display: flex;
+    font-size: 13px;
+    color:#555;
+    margin-top: 8%;
+    margin-left: 4%;
+}
+
+/*第三个div*/
+#di #bottom ul li:nth-child(4):hover .ee{
+    width: 95%;
+    height: 11%;
+    /*border: solid 1px red;*/
+    margin-left:2%;
+    display: flex;
+}
+#di #bottom ul li:nth-child(4):hover .ee span{
+    font-size: 13px;
+    color: #666;
+    margin-left: 5%;
+    margin-top: 5%;
+
+}
+#di #bottom ul li:nth-child(4):hover .ee div{
+    width: 40%;
+    height: 45%;
+    margin-left: 40.4%;
+    margin-top: 4%;
+}
